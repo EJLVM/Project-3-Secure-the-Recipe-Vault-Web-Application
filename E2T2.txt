@@ -1,0 +1,14 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+#1.  securityhub-restricted-ssh-6650deb4 -- EC2 SecurityGroup -- Checks whether the incoming SSH traffic for the security groups is accessible. The rule is compliant when the IP addresses of the incoming SSH traffic in the security groups are restricted.
+
+#2. ecurityhub-iam-user-no-policies-check-a9111220 -- IAM User -- Checks that none of your IAM users have policies attached. IAM users must inherit permissions from IAM groups or roles.
+
+#3. securityhub-restricted-rdp-4acfcf5c -- EC2 SecurityGroup -- Checks whether the incoming RDP traffic is Allowed from 0.0.0.0/0. This rule is compliant when incoming RDP traffic is restricted.
+
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+#1.  Access to the EC2 SecurityGroups have to modified to control access to the instances.
+
+#2.  All Users must be added to group and then only the groups should be granted access to AWS roles
+
+#3. Access to certain TCP ports should be restricted.

@@ -1,0 +1,7 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+The Private Subnets are connected to the internet via the Internet Gateway - these subnets should be only access the internet via a NAT Gateway.
+
+# Poor practice 2
+The Private Subnets are connected to the The Network ACLs which is configured to receive traffic from any IP address (0.0.0.0/0) - access to these subnets should be really restricted e.g. the Security Group of a Bastion Host.

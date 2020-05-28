@@ -1,0 +1,11 @@
+
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+
+1. Disabling password login on the application server
+2. Restricting network traffic to the application server
+
+
+# Neither instance should have had access to the secret recipes bucket, in the event that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+1. By Using the principle of least privilege; access for the existing instance role profile to grant access to only specific Amazon S3 bucket
+2. To add an extra layer of protection for S3 contents; we can enable "Server-side Encryption" on the S3 bucket
